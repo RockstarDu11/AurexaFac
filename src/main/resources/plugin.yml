@@ -1,0 +1,23 @@
+name: AurexaFac
+main: fr.aurexa.fac.AurexaFac
+version: 1.12
+author: Aurexalium
+description: Systeme de factions Aurexalium (claim par chunk + power + SafeZone/WarZone + relations)
+softdepend: [Vault, GroupManager, Essentials, EssentialsChat]
+commands:
+  f:
+    description: Commande principale des factions
+    aliases: [faction, factions]
+    usage: /f <action> [cible]
+permissions:
+  aurexafac.fly:
+    description: Voler dans le claim de sa faction et des factions alliees
+    default: op
+  aurexafac.bypass:
+    description: Ignore les protections de territoire
+    default: op
+  aurexafac.admin:
+    description: Acces a /f admin (join, leave, delete, bypass, autoclaim, autounclaim, spy, format)
+    default: op
+    children:
+      aurexafac.bypass: true

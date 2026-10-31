@@ -1,0 +1,42 @@
+prefix: "&8[&c&lAurexalium&8] &7"
+max-power: 10
+power-loss: 2
+power-regen: 1
+
+# Affichage quand on change de zone (Wilderness, faction, SafeZone, WarZone)
+show-title: true
+show-chat: true
+
+# Fly dans son propre claim et ceux des allies (permission aurexafac.fly)
+fly-enabled: true
+# Le fly se coupe si un joueur hors faction/alliance s'approche (rayon en blocs) ou entre dans le claim
+fly-disable-on-hostile: true
+fly-hostile-radius: 20
+
+# Couleur du nom de faction selon la relation avec celui qui lit
+colors:
+  neutral: "&f"
+  ally: "&a"
+  enemy: "&c"
+  own: "&a"
+
+# --- Tag de faction dans le chat ---
+# Methode Essentials : AurexaFac cree une team du scoreboard par faction avec ce prefixe, et EssentialsChat
+# l'affiche grace a {TEAMPREFIX} au debut de tes formats de groupe (max 16 caracteres).
+team-prefix: true
+team-prefix-format: "{TAG} "
+# Si {TEAMPREFIX} n'est pas dans le format Essentials, AurexaFac ajoute le tag lui-meme avec ce format
+# ({COLOR} = couleur de la relation, {TAG} = tag, {NAME} = nom complet).
+chat-tag-format: "{COLOR}{TAG}&r "
+# Place de ce tag : before-rank = avant le grade, after-rank = juste avant le pseudo
+chat-tag-position: before-rank
+# Envoi du chat : format = Bukkit envoie, AurexaFac ajuste le format / own = AurexaFac envoie a chaque joueur
+chat-delivery: format
+
+# --- Protections ---
+# SafeZone : les joueurs peuvent casser des blocs (mines) ? poser des blocs ?
+safezone-allow-break: true
+safezone-allow-place: false
+# WarZone
+warzone-allow-break: false
+warzone-allow-place: false
